@@ -1,0 +1,272 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: #0b0f19;
+  color: #e5e7eb;
+  line-height: 1.7;
+}
+
+
+section[id] {
+  scroll-margin-top: 90px;
+}
+
+
+.hero {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, #2563eb55, transparent 40%),
+    radial-gradient(circle at bottom right, #22c55e33, transparent 40%);
+  padding: 1.5rem;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 5rem auto 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: #93c5fd;
+}
+
+.desc {
+  margin: 1.2rem 0;
+  max-width: 600px;
+  color: #cbd5f5;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.6rem;
+  background: linear-gradient(135deg, #2563eb, #22c55e);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.menu {
+  display: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+#check { display: none; }
+
+
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 4rem 1.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  max-width: 700px;
+  color: #cbd5f5;
+}
+
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skills span {
+  padding: 0.4rem 0.9rem;
+  border: 1px solid #334155;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+
+.project {
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #1e293b;
+}
+
+.project h3 {
+  font-size: 1.1rem;
+}
+
+.resume-box {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  padding: 2rem;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+}
+
+.resume-box p {
+  color: #cbd5f5;
+  margin-bottom: 1.5rem;
+}
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.4rem;
+  padding: 0.6rem 1.4rem;
+  background: linear-gradient(135deg, #2563eb, #22c55e);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.resume-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.resume-btn.outline {
+  background: transparent;
+  border: 1px solid #334155;
+  color: #93c5fd;
+}
+
+
+footer {
+  border-top: 1px solid #1e293b;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.contact {
+  max-width: 420px;
+  margin: 1.5rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contact input,
+.contact textarea {
+  background: #020617;
+  border: 1px solid #1e293b;
+  color: #e5e7eb;
+  padding: 0.6rem;
+  border-radius: 6px;
+}
+
+.contact button {
+  background: linear-gradient(135deg, #2563eb, #22c55e);
+  border: none;
+  padding: 0.6rem;
+  color: #fff;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.footer-text {
+  margin-top: 1.5rem;
+  color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+
+  .menu { display: block; }
+
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    background: #020617;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  #check:checked ~ ul {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.6rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 1.6rem;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.project-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #cbd5f5;
+  margin-bottom: 1rem;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: #2563eb;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.7rem;
+  margin-right: 0.4rem;
+  border-radius: 999px;
+  background: #0b1220;
+  border: 1px solid #1e293b;
+  color: #93c5fd;
+}
